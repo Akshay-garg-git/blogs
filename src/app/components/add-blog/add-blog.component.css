@@ -1,0 +1,21 @@
+.m-t-60 {
+	margin-top: 30px;
+}
+.add-modal-dialog {
+	position: relative;
+    width: 600px;
+    margin: .5rem;
+    pointer-events: none;
+}
+
+.add-modal-dialog {
+    /* max-width: 495px; */
+    margin: 1.75rem auto;
+}
+
+.modal-login .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: none;
+     border: 1px solid #d4d4d4; 
+}
