@@ -1,1 +1,65 @@
-<p>login works!</p>
+<!-- start Use for show the success and error message toast. -->
+<div class="content-section implementation">
+
+
+</div>
+<!-- End -->
+
+<div class="modal-dialog modal-login">
+	<div class="modal-content">
+		<div class="modal-header">
+			<div class="avatar">
+				<!-- <img src="./assets/images/logo.png" alt="Avatar" style="height: 60px;"> -->
+			</div>				
+			<h4 class="modal-title">Login Panel</h4>
+		</div>
+
+		<div class="modal-body">
+
+			<form name="form" (ngSubmit)="f.form.valid && loginSubmit()" #f="ngForm" novalidate  style="margin-bottom: 20px;">
+
+				<div class="form-group">
+
+					<input type="text" class="form-control" placeholder="Username" name="username" [(ngModel)]="login_data.username"  #username="ngModel" [ngClass]="{ 'is-invalid': f.submitted && username.invalid }">
+
+
+					<div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+						<div *ngIf="username.errors.required">Username is required</div>
+					</div>
+
+				</div>
+
+				<div class="form-group">
+
+					<input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="login_data.password"  #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }">
+
+					
+					<div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+						<div *ngIf="password.errors.required">Password is required</div>
+					</div>
+
+				</div>
+
+				<div class="form-group">
+
+					<button type="submit" class="btn btn-primary btn-block btn-flat" [disabled]="btnlogin == true">
+						<span *ngIf="btnlogin == true">
+							<i class="fa fa-spinner fa-spin"></i>&nbsp;&nbsp;
+						</span>Sign In
+					</button>
+
+				</div>
+
+				<div class="form-group alert alert-danger" role="alert" *ngIf="showError == true">
+					Incorrect Credentials
+				</div>	
+
+			</form>
+
+
+		</div>
+
+	</div>
+
+</div>
+
