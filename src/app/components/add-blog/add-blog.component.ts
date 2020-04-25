@@ -51,11 +51,15 @@ export class AddBlogComponent implements OnInit {
   			return;
   		}
 
+      this.btnPost = true;
+
   		post_array = JSON.parse(localStorage.getItem('blogs')) || [];
   	
   		post_array.push(blog_data);
   	
   		localStorage.setItem('blogs', JSON.stringify(post_array));
+
+      this.btnPost = false;
 
   		this.router.navigateByUrl("/blogs");
 

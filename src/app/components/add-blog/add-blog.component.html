@@ -36,10 +36,14 @@
 
 						<div class="form-group">
 
-							<button type="submit" class="btn btn-primary btn-flat" [disabled]="btnPost == true" style="float: right;">
+							<button type="submit" class="btn btn-primary btn-flat" [disabled]="btnPost == true" style="float: right; margin-left: 10px;">
 								<span *ngIf="btnPost == true">
 									<i class="fa fa-spinner fa-spin"></i>&nbsp;&nbsp;
 								</span>Create & Post
+							</button>
+
+							<button type="button" class="btn btn-danger" routerLink="/blogs" style="float: right; background: red;">
+								Back
 							</button>
 
 						</div>

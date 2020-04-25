@@ -11,10 +11,19 @@ export class BlogsComponent implements OnInit {
 
   	blogs: any [] = [];
 
+  	loader: boolean = false;
+
   	ngOnInit(): void {
+
+  		this.loader = true;
 
   		this.blogs = JSON.parse(localStorage.getItem('blogs'));
   		console.log(this.blogs);
+
+      if(this.blogs)
+  		  this.blogs.reverse();
+
+  		this.loader = false;
 
   	}
 
