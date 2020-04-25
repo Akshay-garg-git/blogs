@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { AddBlogComponent } from './components/add-blog/add-blog.component';
+import { FrameComponent } from './components/frame/frame.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AddBlogComponent } from './components/add-blog/add-blog.component';
     LoginComponent,
     BlogsComponent,
     AddBlogComponent,
+    FrameComponent,
     
   ],
   imports: [
