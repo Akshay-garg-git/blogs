@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogsComponent implements OnInit {
 
-  constructor() { }
+  	constructor() { }
 
-  ngOnInit(): void {
-  }
+  	blogs: any [] = [];
+
+  	ngOnInit(): void {
+
+  		this.blogs = JSON.parse(localStorage.getItem('blogs'));
+  		console.log(this.blogs);
+
+  	}
 
 }

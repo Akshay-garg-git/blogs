@@ -4,41 +4,33 @@
 		<div class="add-modal-dialog modal-login">
 			
 			<div class="modal-content m-t-60">
-				<div class="modal-header">
+				<div class="modal-header" style="padding-top: 0px; border-bottom: 1px solid #d4d4d4;">
 					<h3 class="modal-title">Add Blog</h3>
 				</div>
 
-				<div class="modal-body">
+				<div class="modal-body m-t-15">
 
 					<form [formGroup]="createBlogForm" (ngSubmit)="createBlog();" ngNativeValidate  style="margin-bottom: 20px;">
 
 						<div class="form-group">
-							<label for="Variantimg">Title</label>
-							<input type="text" name="title" class="form-control" formControlName="title" placeholder="Title" id="varianttype" required>
-
-							<!-- <input type="text" class="form-control" placeholder="Title" name="title" [(ngModel)]="blog_data.title"  #title="ngModel" [ngClass]="{ 'is-invalid': f.submitted && title.invalid }" required>
-
-
-							<div *ngIf="f.submitted && title.invalid" class="invalid-feedback">
-								<div *ngIf="title.errors.required">Title is required</div>
-							</div> -->
+							<label for="userNameId">User Name</label>
+							<input type="text" name="username" class="form-control" formControlName="username" placeholder="User Name" id="userNameId" maxlength="40" required>
 
 						</div>
 
 						<div class="form-group">
-							<label for="Variantimg">Content</label>
+							<label for="titleId">Title</label>
+							<input type="text" name="title" class="form-control" formControlName="title" placeholder="Title" id="titleId" maxlength="60" required>
 
-							<ckeditor [editor]="Editor" name="content" formControlName="content" data="<p>Hello, world!</p>" id="descId"></ckeditor>
+						</div>
+
+						<div class="form-group">
+							<label for="contentId">Content</label>
+
+							<ckeditor [editor]="Editor" name="content" formControlName="content" data="<p>Hello, world!</p>" id="contentId"></ckeditor>
 							<p style="color: red; font-size: 13px;" *ngIf="show_content_error == true">
 								Content Required !
 							</p>
-
-							<!-- <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="blog_data.password"  #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required>
-
-							
-							<div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
-								<div *ngIf="password.errors.required">Password is required</div>
-							</div> -->
 
 						</div>
 

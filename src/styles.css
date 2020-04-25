@@ -3,6 +3,9 @@
 .m-t-20 {
   margin-top: 20px;
 }
+.m-t-15 {
+  margin-top: 15px;
+}
 
 /* Start Login */
 .modal-content {
@@ -89,3 +92,18 @@
   margin: 100px auto;
 }
 /* End Login */
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .blog-image {
+    height: 30%;
+  }
+  .xs-font-content {
+    font-size: 0.7rem;
+  }
+}
+
+.card-shadow {
+  box-shadow: 0 5px 13px rgba(0,0,0,.5);
+}
+

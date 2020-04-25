@@ -25,6 +25,7 @@ export class AddBlogComponent implements OnInit {
 
   	createBlogForm = new FormGroup ({
 
+    username: new FormControl(),
 		title:new FormControl(),
 		content:new FormControl(),
 		
@@ -42,8 +43,6 @@ export class AddBlogComponent implements OnInit {
   		var post_array = [];
 
   		this.show_content_error = false;
-
-  		console.log(this.createBlogForm.value);
 
   		var blog_data = this.createBlogForm.value;
 

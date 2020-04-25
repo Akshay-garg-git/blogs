@@ -1,27 +1,36 @@
 <div class="container">
 	
-	<div class="row m-t-20" style="float: right;">
+	<div class="m-t-20">
 		<button type="button" class="btn btn-success" routerLink="/add-blog">Add Blog</button>
 	</div>
 
-	<div class="row">
+	<div class="row m-t-20">
 
-		<div class="content" role="main">
-
-			<!-- Show the blogs -->
-			<div class="card" style="width: 18rem;">
-
-				<img class="card-img-top" src="..." alt="Card image cap">
-				
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+		<!-- Show the blogs -->
+		<div class="col-sm-6 col-md-6 col-12 col-xs-12" *ngFor="let blog of blogs">
+			
+			<div class="card card-shadow" style="max-width: 540px; margin-bottom: 40px; height: 230px;">
+				<div class="row no-gutters">
+					<div class="col-md-4 col-5 col-xs-5">
+						<img src="./assets/images/blog.jpg" class="card-img blog-image img-responsive" alt="..." />
+						<p class="card-text" style="margin-left: 10px;">
+							<small class="text-muted">
+								{{ blog.username ? blog.username : 'Akshay' }}
+							</small>
+						</p>
+					</div>
+					<div class="col-md-8 col-7 col-xs-7">
+						<div class="card-body">
+							<h5 class="card-title">{{ blog.title }}</h5>
+							<p class="card-text xs-font-content">
+								<span [innerHtml]="blog.content | slice:0:245"></span>
+							</p>
+						</div>
+					</div>
 				</div>
-
 			</div>
 
-  		</div>
+		</div>
 
 	</div>
 
